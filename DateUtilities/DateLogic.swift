@@ -10,6 +10,12 @@ import Foundation
 
 public struct DateLogic {
 
+    /// `Calculates` the number of weeks between two **dates**.
+    ///
+    /// - Parameters:
+    ///   - from: The start date.
+    ///   - to: The end date.
+    /// - Returns: an `Int` of the number of weeks.
     public static func weeks(from: Date, to: Date) -> Int {
         let components = Calendar.current.dateComponents([.weekOfMonth], from: from, to: to)
         print("weeks: \(String(describing: components.weekOfMonth))")
